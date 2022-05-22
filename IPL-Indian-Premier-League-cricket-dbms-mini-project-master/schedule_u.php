@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 <style >
-	table{
-		border: 1px solid black;
-	}
-	tr{
-		border: 1px solid black;
-	}
-	th{
-		border: 1px solid black;
-	}
+    table{
+        border: 1px solid black;
+    }
+    tr{
+        border: 1px solid black;
+    }
+    th{
+        border: 1px solid black;
+    }
 </style>
-<head><p>
-	<title>SCHEDULES</title>
+<head>
+    <title>RANKS</title>
 </head>
 <body>
-	<button style="background-color:"><a href="user1st.html" style="color:">Back</a></button>
-	 <div style="margin-top:115px; style : center" >
-	<table align="center">
-		<tr>
-			<th>Date</th>
-			<th>Team1</th>
-			<th>Team2</th>
-			<th>Match Number</th>
-			<th>VENUE</th>
-		
-		</tr>
-		<?php
-		$con=mysqli_connect("localhost","root","","cricket",3307);
-		$query="select * from schedules order by date"  ;
-		$result=mysqli_query($con,$query);
-		if(mysqli_num_rows($result)>0)
-		{
-			while ($row=mysqli_fetch_assoc($result)) {
-			echo "<tr><th>".$row["date"]."</th><th>".
-			$row["team1"]."</th><th>".
-			$row["team2"]."</th><th>".
-			$row["match_no"]."</th><th>".
-			$row["venue"]."</th></tr>";
-			}
-		}
-		mysqli_close($con);
-		?>
+<div class="bag-image">
+    <img class="top--img" src="IPL Logo.jpg" />
 
+    <button class="back--btn"><a href="user1st.html" style="color:">Back</a></button>
+     <div style="margin-top:225px; style : center" >
+    <table align="center">
+        <tr>
+            <th>Stadium Name</th>
+            <th>Capacity</th>
+            <th>DOI</th>
+            <th>Board Name</th>
+            <th>Team's Stadium</th>
+        </tr>
+        <?php
+        $con=mysqli_connect("localhost","root","","cricket",3307);
+        $query="select * from stadiums";
+        $result=mysqli_query($con,$query);
+        if(mysqli_num_rows($result)>0)
+        {
+            while ($row=mysqli_fetch_assoc($result)) {
+            echo "<tr><th>".$row["stadium_name"]."</th>"."<th>".
+            $row["capacity"]."</th><th>".
+            $row["DOI"]."</th><th>".
+            $row["board_name"]."</th><th>".
+            $row["team"]."</th></tr>";
+            }
+        }
+        mysqli_close($con);
+        ?>
+    </table>
 </body>
 </html>

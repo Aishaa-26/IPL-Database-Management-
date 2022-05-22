@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 <head>
     <title></title>
 </head>
@@ -19,14 +20,11 @@ background-color: #111111;
 
 
 </style>
-<body background=""><button style="background-color:#814111 "><a href="admin1st.html" style="color: white">Back</a></button><br><br>
-
-
-    
-
+<body background=""> <button class="back--btn">
+        <a href="know.html" style="color:white;">Back</a>
+      </button>
 <?php
 
-    
 
     $con = mysqli_connect("localhost", "root", "", "cricket",3307) or die(mysqli_error($con));
 

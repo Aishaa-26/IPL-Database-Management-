@@ -16,8 +16,5 @@
     else
     {echo "<script type='text/javascript'>alert('ERROR!!');</script>";
       header("refresh: 0.01; url=rank.php");
-    
-        //echo "error";
-        //header("refresh: 0.01; url=admin1st.html");
     }
     ?>

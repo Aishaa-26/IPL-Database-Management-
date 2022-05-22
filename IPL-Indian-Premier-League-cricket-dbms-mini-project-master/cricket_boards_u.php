@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 <style >
 	table{
 		border: 1px solid black;
@@ -15,7 +16,11 @@
 	<title>RANKS</title>
 </head>
 <body>
-	<button style="background-color: "><a href="user1st.html" style="color:">Back</a></button>
+<div class="bag-image">
+    <img class="top--img" src="IPL Logo.jpg" />
+    <button class="back--btn">
+        <a href="user1st.html" style="color:white;">Back</a>
+      </button>
 	 <div style="margin-top:225px; style : center" >
 	<table align="center">
 		<tr>

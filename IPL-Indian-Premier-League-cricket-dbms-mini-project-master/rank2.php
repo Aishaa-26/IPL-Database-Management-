@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 <style >
 	table{
 		border: 0px solid black;
 	}
 	tr{
 		border: 1px solid black;
-		background-color:#F6F9F0;
 	}
 	th{
 		border: 1px solid black;
 		color: black;
 	}
+	.title-table{
+        color: #e0295d;
+        font-size: 50px;
+  background: #19388a;
+  text-align: center;  
+    }
 </style>
 <head>
 	<title>RANKS</title>
 </head>
-
+<body >
+<div class="bag-image">
+    <img class="top--img" src="IPL Logo.jpg" />
+    <button class="back--btn">
+    <a href="AdminRankingbar.html">Back</a></button>
 <table width="100%"><tr><th>
  <div style="margin-top:10px;" >
  	<table width="100%"><tr><th><p style="align-content: center;"><h1>BATSMAN RANKING</h1></p></th></tr>

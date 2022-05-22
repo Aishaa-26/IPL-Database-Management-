@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css" />
 <style >
 	table{
 		border: 0px solid black;
@@ -12,18 +13,35 @@
 		border: 1px solid black;
 		color: black;
 	}
+	.Tilte-of-page{
+		width: 50%;
+		position: relative;
+		left: 39%;
+		top: -10px;
+	}
+	.move-up{
+		position: relative;
+		top:-20px;
+	}
 </style>
 <head>
 	<title>RANKS</title>
 </head>
+<body>
+<div class="bag-image">
+      <img class="top--img" src="IPL Logo.jpg" />
+      <button class="back--btn">
+        <a href="Rankingbar.html" style="color: white">Back</a>
+      </button>
 
-<table width="100%"><tr style="width: 100%"><th>
-<p align="center">
-	<h1>ALL-ROUNDER RANKING
-</h1>
-</p></th></tr>
+	<h1 class="Tilte-of-page">BATSMAN RANKING</h1>
+			
+			
+			<table width="50%">
+ <div style="margin-top:10px; style : center" >
 
-		<table align="center">
+	<table class="move-up" align="center">
+
 		<tr>
 			<th>Name</th>
 			<th>Rank</th>

@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 <style >
-	table{
-		border: 0px solid black;
+    table{
+        border: 0px solid black;
+    }
+    tr{
+        border: 1px solid black;
+
+    }
+    th{
+        border: 1px solid black;
+        color: black;
+    }
+
+		.title-table{
+        color: #e0295d;
+        font-size: 50px;
+  background: #19388a;
+  text-align: center;  
+    }
+.shift-update-up{
+	position: relative;
+	top: -300px;
+}
+
+.updation{
+	position:relative;
+	left: 550px;
+	top: 20px;
+}
+.btn--update{
+	margin-top: 5px;
+	padding: 5px 10px;
+	color: #fff;
+	background-color: #19388a;
 	}
-	tr{
-		border: 1px solid black;
-		background-color:#F6F9F0;
-	}
-	th{
-		border: 1px solid black;
-		color: black;
-	}
+
+
 </style>
 <head>
-	<title>RANKS</title>
+    <title>RANKS</title>
 </head>
-<body style="background-color:">
-	<button style="background-color: "><a href="AdminrankingBar.html" style="color:">Back</a></button>
+ 
+<body >
+<div class="bag-image">
+    <img class="top--img" src="IPL Logo.jpg" />
+    <button class="back--btn">
+    <a href="AdminRankingbar.html">Back</a></button>
+		<div class="title-table">
+Team Ranking
+</div>
+   
+    <table align="center">
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Rating</th>
+        </tr>
+        <?php
+        $con=mysqli_connect("localhost","root","","cricket",3307);
+        
 
-	 <div style="margin-top:10px; style : center" ><table width="100%"><tr><th><p style="align-content: center;"><h1 style="color:">TEAM RANKING</h1></p></th></tr><tr><th>
-	<table align="center">
-		<tr>
-			<th>Rank</th>
-			<th>Name</th>
-			<th>Rating</th>
-		</tr>
-		<?php
-		$con=mysqli_connect("localhost","root","","cricket",3307);
-		
 
 
-
-		$query="select * from team order by rating desc";
-		$result=mysqli_query($con,$query);
-		[$i]=floor(1);
-		if(mysqli_num_rows($result)>0)
-		{
-			while ($row=mysqli_fetch_assoc($result)) {
-
-			 $i=$i+1;
-			$nm = $row["name"];
-			$q="update team set rank='$i' where name='$nm'";
+        $query="select * from team order by rating desc";
+        $result=mysqli_query($con,$query);
+        [$i]=floor(1);
+        if(mysqli_num_rows($result)>0)
+        {
+            while ($row=mysqli_fetch_assoc($result)) {
+ 
+             $i=$i+1;
+            $nm = $row["name"];
+            $q="update team set rank='$i' where name='$nm'";
     
-    		mysqli_query($con,$q);
-			echo "<tr><th>"
-			.floor($i)."</th><th>".
-			$row["name"]."</th><th>".
-			$row["rating"]."</th></tr>";
-			}
-		}?>
+            mysqli_query($con,$q);
+            echo "<tr><th>"
+            .floor($i)."</th><th>".
+            $row["name"]."</th><th>".
+            $row["rating"]."</th></tr>";
+            }
+        }?>
 </table></th></tr></table></div>
-
-
-<table><tr><th>
-	<p align="center" style="width: 100%;padding-right: 100px;"><div style="align-content: center;background-color: ">
-	<form action="update.php" method="POST">ENTER TEAM-RATING   <input type="number" name="rating" placeholder="129/130/..." align="right"><br>
-	
-	ENTER TEAMNAME    <input type="text" name="name" placeholder="RCB" align="padding-right"><br>
-	<button>UPDATE</button></form>
+<section class="shift-update-up">
+<div class="title-table">
+Update Table
+</div>
+<table class="updation"><tr><th>
+    <p align="center" style="width: 100%;padding-right: 100px;"><div style="align-content: center; ">
+    <form action="update.php" method="POST">ENTER TEAM-RATING   <input type="number" name="rating" placeholder="13/120/..." align="right"><br><br>
+    ENTER TEAMNAME    <input type="text" name="name" placeholder="RCB/CSK/MI/SRH" align="padding-right"><br>
+    <button class="btn--update">UPDATE</button></form>
 </div></p></th></tr></table>
-
-
+			</section>
+			</div>
 </body>
 </html>

@@ -1,13 +1,9 @@
 
 <?php
-
     session_start();
     $name=$_POST['name'];
-   
-
     $runs=$_POST['runs'];
     $wickets=$_POST['wickets'];
-
     $no_of_matches=$_POST['no_of_matches'];
 
     $con = mysqli_connect("localhost", "root", "", "cricket",3307) or die(mysqli_error($con));

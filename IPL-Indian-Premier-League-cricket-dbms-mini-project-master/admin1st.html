@@ -1,24 +1,34 @@
 
 <html>
 <title></title>
+<link href='https://css.gg/home-alt.css' rel='stylesheet'>
 <style>
-.footer{
-  position: absolute;
-  bottom: 140;
-  top: 550;
-  width: 100%;
-}
-    
+
     ul.abc {
-    list-style-type: none;
+        list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
     overflow: hidden;
-    background-color: #333333;
+    background-color: #19388a;
+    border-color: #FFF;
     position: relative;
-    top: -10px;
+    top: 10px;
 }
+
+.bag-image {
+     background-image: url("sports_grass_field_04.jpg");
+        background-color: #cccccc;  
+        height: 713px; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .top--img {
+        width: 1473px;
+        height: 110px;
+      }
 
 li {
     float: left;
@@ -37,6 +47,13 @@ li a {
     top: 50;
 }
 
+
+.to-search{
+    position: relative;
+    top:100px;
+    text-align: center;
+    right: 20px;
+}
 li a:hover {
     background-color: #111111;
 }
@@ -63,6 +80,28 @@ button {
     padding: 16px;
 }
 
+
+.btn--submit{
+        background-color: #19388a;
+    color: white;
+    padding: 3px 3px;
+    border: none;
+    cursor: pointer;
+    width: 7%;
+    height: 30px;
+    margin-right: 50px;
+  border-radius: 4px;
+  font-size: 15px;
+      }
+
+      .btn--submit:hover{
+        background-color: #3b57a5;
+  transition-delay: 0.5ms;
+      }
+
+      .gg-home-alt{
+    padding-bottom: 18px;
+}
 p{
   color: white;
   font-size: 50px;
@@ -81,41 +120,55 @@ select{
     width: 50%;
     color: #000;
 }
+
+ul.abc-btm{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color:#19388a;
+    position: relative;
+    bottom: -165px;
+    left: 0px;
+
+}
+
 </style>
-<body style="background-color:#FFF">  <p align="center"><img src="img/logo.png" style="width: 400px;padding-bottom: 0px;height: 105px;"></p>
-  
+<body style="background-color:#FFF"> 
+    <div class="bag-image">
+        <img class="top--img" src="IPL Logo.jpg" />
+    <div>  
   <ul class="abc">
-                  <li><a href="admin1st.html">HOME</a></li></form>
+    <li><a href="Homelink.html"><i class="gg-home-alt"></i></a></li></form>
                    <li><a href="schedule.php">SCHEDULES</a></li></form>
                   <li><a href="AdminRankingbar.html">RANKINGS</a></li></form>
                    <li><a href="stadium.php">STADIUMS</a></li></form>
                    <li><a href="cricket_boards.php">CRICKET BOARDS</a></li></form>
-                    <li><a href="about.html">ABOUT</a></li></form>
+                   
                  </ul></table>
-                  <!-- <table style="background-color: "> -->
-        <form action="player_search.php" method="post"><table><tr align="center">
-            <div class="container" style="text-align:center; font-family:Times New Roman;">
-            <p style="text-align: center;font-size: 30;  color: black;"; > PLAYER Cap number <input type="text" placeholder="Enter Cap Number"  name="cap_no" style="width: 300;height:30;">
-                <br><br><input type="submit" name="submit"></p></tr></table>
-        </div>
-    </tr>
-</table>
-</form></table>
-
+      
+                 <SECTION class="to-search">
+                    <form action="player_search_user.php" method="post">
+                        <div class="container" style="text-align:center; font-family:Times New Roman;">
+                        <p style="text-align: center;font-size: 30;  color: black;"; > Player Cap Number <input type="text" placeholder="Enter cap number"  name="cap_no" style="width: 130;height:30; align-content: center;">
+                            <br><br><input type="submit" name="submit" class="btn--submit"><br><br><br><br><br>
+                        </form>
+            
+                    </SECTION>
 
       
-<div class="footer">
 
-<ul class="abc  " style="margin-bottom: 200px;background-position: bottom;">
+<ul class="abc-btm">
                   <li><a href="addplayer.html">ADD PLAYER</a></li>
                    <li><a href="addschedule.html">ADD SCHEDULE</a></li>
                   <li><a href="addstadium.html">ADD STADIUMS</a></li>
                    <li><a href="deleteplayer.php">DELETE PLAYER</a></li>               
-                    <li style="float: right;"><a href="admin.html">LOGOUT</a></button1></li>
+                    <li style="float: right;"><a href="index.html">LOGOUT</a></button1></li>
                   <li style="float: right;"></li>
                 </ul>
 
-</table></div>
+</div>
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 <style >
 	table{
 		border: 1px solid black;
@@ -10,13 +11,30 @@
 	th{
 		border: 1px solid black;
 	}
+	.title-table{
+        color: #e0295d;
+        font-size: 50px;
+  background: #19388a;
+  text-align: center;  
+    }
+
+		.stadium-table{
+			position: relative;
+			top: 30px;
+		}
 </style>
 <head>
-	<title>RANKS</title>
+	<title>Stadium</title>
 </head>
 <body>
-	<button style="background-color: "><a href="admin1st.html" style="color:">Back</a></button>
-	 <div style="margin-top:225px; style : center" >
+<div class="bag-image">
+    <img class="top--img" src="IPL Logo.jpg" />
+    <button class="back--btn">
+    <a href="admin1st.html">Back</a></button>
+		<div class="title-table">
+Team Ranking
+</div>
+<div class="stadium-table">
 	<table align="center">
 		<tr>
 			<th>Stadium Name</th>
@@ -42,5 +60,6 @@
 		mysqli_close($con);
 		?>
 	</table>
+	</div>
 </body>
 </html>

@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css" />
 <style >
 	table{
 		border: 0px solid black;
 	}
 	tr{
 		border: 1px solid black;
-		background-color:#F6F9F0;
 	}
 	th{
 		border: 1px solid black;
 		color: black;
 	}
+	.Tilte-of-page{
+		width: 50%;
+		position: relative;
+		left: 39%;
+	}
 </style>
 <head>
 	<title>RANKS</title>
 </head>
+<body>
+<div class="bag-image">
+      <img class="top--img" src="IPL Logo.jpg" />
+      <button class="back--btn">
+        <a href="Rankingbar.html" style="color: white">Back</a>
+      </button>
 
-<table width="100%"><tr><th>
+		<h1 class="Tilte-of-page">BATSMAN RANKING</h1>
+			
+			
+			<table width="50%">
  <div style="margin-top:10px; style : center" >
- 	<table width="100%"><tr><th><p style="align-content: center;"><h1 style="color: #51111">BATSMAN RANKING</h1></p></th></tr>
+
 	<table align="center">
 		<tr>
 			<th>Name</th>
@@ -39,4 +53,7 @@
 			$row["name"]."</th><th>".
 			$row["runs"]."</th></tr>";
 			}
-		}?></table></th><th>
+		}?></table></th>
+
+	</body>
+	</html>

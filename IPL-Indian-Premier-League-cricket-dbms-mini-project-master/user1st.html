@@ -1,28 +1,42 @@
 <html>
 <title></title>
-<style>
-div.footer{
-  position: fixed;
-  bottom: 0;
-  top: 550;
-  width: 100%;
-}
-    
+<link rel="stylesheet" href="style.css">
+<link href='https://css.gg/home-alt.css' rel='stylesheet'>
+<style>    
     ul.abc {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
     overflow: hidden;
-    background-color: #333333;
+    background-color: #19388a;
+    border-color: #FFF;
     position: relative;
-    top: -10px;
+    top: 10px;
+}
+ul.abc-btm{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color:#19388a;
+    position: relative;
+    bottom: -165px;
+    left: 0px;
+
 }
 
 li {
     float: left;
 }
 
+.to-search{
+    position: relative;
+    top:100px;
+    text-align: center;
+    right: 20px;
+}
 li a {
     display: block;
     color: white;
@@ -53,10 +67,15 @@ button {
     width: 14%;
    
 }
-
 .container {
     padding: 16px;
-}p{
+}
+
+.gg-home-alt{
+    padding-bottom: 18px;
+}
+
+p{
   color: white;
   font-size: 50px;
   font-family: all;
@@ -68,22 +87,57 @@ select{
   align-content: center;
   text-align: center;
 }
-</style>
-<body style="background-color:#47ED1D">  <p align="center"><img src="img/logo.png" style="width: 400px;padding-bottom: 0px;height: 105px;"></p>
-  <ul class="abc">
-                  <li><a href="user1st.html">HOME</a></li></form>
-                   <li><a href="schedule_u.php">SCHEDULES</a></li></form>
-                  <li><a href="Rankingbar.html">RANKINGS</a></li></form>
-                   <li><a href="stadium_u.php">STADIUMS</a></li></form>
-                   <li><a href="cricket_boards_u.php">CRICKET BOARDS</a></li></form>
-                    <li><a href="about_u.html">ABOUT</a></li></form>
-                 </ul></table>
-                  <table>
-        <form action="player_search_user.php" method="post"><table><tr align="center">
-            <div class="container" style="text-align:center; font-family:Times New Roman;">
-            <p style="text-align: center;font-size: 30;  color: black;"; > Player Name <input type="text" placeholder="Enter Name"  name="playername" style="width: 100;height:30;">
-                <br><br><input type="submit" name="submit"><br><br><br><br><br>
-        <button style="float: right;"><a href="login.html">LOGOUT</a></button>
 
+.extreme-left{
+    position:absolute;
+    right: -5px;
+}
+
+
+      .btn--submit{
+        background-color: #19388a;
+    color: white;
+    padding: 3px 3px;
+    border: none;
+    cursor: pointer;
+    width: 7%;
+    height: 30px;
+    margin-right: 50px;
+  border-radius: 4px;
+  font-size: 15px;
+      }
+
+      .btn--submit:hover{
+        background-color: #3b57a5;
+  transition-delay: 0.5ms;
+      }
+</style>
+<body> 
+    <div class="bag-image">
+    <img class="top--img" src="IPL Logo.jpg" />
+  <ul class="abc">
+                  <li><a href="userHomepagelink.html"><i class="gg-home-alt"></i></a></li>
+                   <li><a href="schedule_u.php">SCHEDULES</a></li>
+                  <li><a href="Rankingbar.html">RANKINGS</a></li>
+                   <li><a href="stadium_u.php">STADIUMS</a></li>
+                   <li><a href="cricket_boards_u.php">CRICKET BOARDS</a></li>
+  </ul> </table>
+             
+
+                    <SECTION class="to-search">
+        <form action="player_search_user.php" method="post">
+            <div class="container" style="text-align:center; font-family:Times New Roman;">
+            <p style="text-align: center;font-size: 30;  color: black;"; > Player Cap Number <input type="text" placeholder="Enter cap number"  name="cap_no" style="width: 130;height:30; align-content: center;">
+                <br><br><input type="submit" name="submit" class="btn--submit"><br><br><br><br><br>
+            </form>
+
+        </SECTION>
+            <div class="footer">
+                <ul class="abc-btm">
+                <li><a href="know.html">TO KNOW MORE</a></li>
+                <li class="extreme-left"><a href="index.html">LOGOUT</a></li>
+                </ul>
+            </div>
+            </div>
 </body>
 </html>
