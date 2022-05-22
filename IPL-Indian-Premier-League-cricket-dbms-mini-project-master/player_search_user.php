@@ -25,8 +25,8 @@ background-color: #111111;
 
 <?php
      $con = mysqli_connect("localhost", "root", "", "cricket",3307) or die(mysqli_error($con));
-    $player=$_POST['playername'];
-    $query="select * from player where playername like '%$player%'";
+    $cap_no=$_POST['cap_no'];
+    $query="select * from player where cap_no = '$cap_no'";
     $res=mysqli_query($con,$query);
     if(mysqli_num_rows($res)>0){
 

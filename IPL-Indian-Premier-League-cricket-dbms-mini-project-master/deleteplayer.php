@@ -51,7 +51,7 @@
               Enter Player Cap Number to Delete
               <input
                 type="text"
-                name="playername"
+                name="cap_no"
                 style="width: 300; height: 25"
               />
               <br /><br />

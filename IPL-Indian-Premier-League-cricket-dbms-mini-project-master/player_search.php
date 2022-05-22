@@ -30,15 +30,11 @@ background-color: #111111;
 
     $con = mysqli_connect("localhost", "root", "", "cricket",3307) or die(mysqli_error($con));
 
-    $player=$_POST['playername'];
-    $query="select * from player  where playername like '%$player%'";
-   
-    
+    $cap_no = $_POST['cap_no'];
+    $query="select * from player where cap_no='$cap_no'";
     $res=mysqli_query($con,$query);
     if(mysqli_num_rows($res)>0){
             while($row = mysqli_fetch_assoc($res)){
-
-       
 
         echo " <h1><p align="."center".">".$row["playername"]."<p></h1><table width="."100%"." height="."400px"."><tr><th height="."100%"."><img src=".$row["image"]." width="."700px"."></th><th><table width="."100%".">
         <tr><th>PLAYERNAME</th><th>".$row["playername"]."</th></tr>
@@ -49,12 +45,8 @@ background-color: #111111;
         <tr><th>BATTING BEST</th><th>".$row["batting_best"]."</th></tr>
         <tr><th>BOWLING BEST</th><th>".$row["bowling_best"]."</th></tr></table></th>
         </tr></table>";
-
-
-
     }
-
-    }
+ }
 
 else
 {
