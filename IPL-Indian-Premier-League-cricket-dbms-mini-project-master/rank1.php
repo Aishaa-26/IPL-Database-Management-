@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.css">
 <style >
     table{
         border: 0px solid black;
     }
     tr{
         border: 1px solid black;
-
+       
     }
     th{
         border: 1px solid black;
         color: black;
     }
 
-		.title-table{
+    .title--decro{
         color: #e0295d;
         font-size: 50px;
   background: #19388a;
   text-align: center;  
-    }
-.shift-update-up{
-	position: relative;
-	top: -300px;
-}
+  
 
-.updation{
-	position:relative;
-	left: 550px;
-	top: 20px;
-}
-.btn--update{
-	margin-top: 5px;
-	padding: 5px 10px;
-	color: #fff;
-	background-color: #19388a;
-	}
-
-
+      }
 </style>
 <head>
     <title>RANKS</title>
 </head>
+<link rel="stylesheet" href="style.css" />
  
 <body >
 <div class="bag-image">
-    <img class="top--img" src="IPL Logo.jpg" />
-    <button class="back--btn">
-    <a href="AdminRankingbar.html">Back</a></button>
-		<div class="title-table">
-Team Ranking
-</div>
-   
+      <img class="top--img" src="IPL Logo.jpg" />
+      <button class="back--btn">
+        <a href="AdminRankingbar.html" style="color: white">Back</a>
+      </button>
+      <h1 class="title--decro">Team Ranking</h1>
     <table align="center">
         <tr>
             <th>Rank</th>
@@ -83,17 +65,14 @@ Team Ranking
             }
         }?>
 </table></th></tr></table></div>
-<section class="shift-update-up">
-<div class="title-table">
-Update Table
-</div>
-<table class="updation"><tr><th>
-    <p align="center" style="width: 100%;padding-right: 100px;"><div style="align-content: center; ">
-    <form action="update.php" method="POST">ENTER TEAM-RATING   <input type="number" name="rating" placeholder="13/120/..." align="right"><br><br>
-    ENTER TEAMNAME    <input type="text" name="name" placeholder="RCB/CSK/MI/SRH" align="padding-right"><br>
-    <button class="btn--update">UPDATE</button></form>
+ 
+<table><tr><th>
+    <p align="center" style="width: 100%;padding-right: 100px;"><div style="align-content: center;background-color: ">
+    <form action="update.php" method="POST">ENTER TEAM-RATING   <input type="number" name="rating" placeholder="129/130/..." align="right"><br>
+    
+    ENTER TEAMNAME    <input type="text" name="name" placeholder="team name" align="padding-right"><br>
+    <button>UPDATE</button></form>
 </div></p></th></tr></table>
-			</section>
-			</div>
+ 
 </body>
 </html>

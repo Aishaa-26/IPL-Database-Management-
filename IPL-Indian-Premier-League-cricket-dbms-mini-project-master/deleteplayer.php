@@ -60,7 +60,7 @@
                 style="float: center"
                 value="Submit"
               /><button style="float: right">
-                <a href="admin.html">Logout</a>
+                <a href="admin1st.html">Logout</a>
               </button>
             </p>
           </tr>

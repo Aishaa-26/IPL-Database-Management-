@@ -23,12 +23,12 @@
     if(mysqli_query($con,$query))
     {
         echo "<script type='text/javascript'>alert('NEW RECORD CREATED SUCCESSFULLY!!');</script>";
-      header("refresh: 0.01; url=admin1.html");
+      header("refresh: 0.01; url=admin1st.html");
     }
     else
     {
     	echo "<script type='text/javascript'>alert('ERROR');</script>";
-        header("refresh: 0.01; url=admin1.html");
+        header("refresh: 0.01; url=admin1st.html");
     	mysqli_error($con);
     }
     ?>
