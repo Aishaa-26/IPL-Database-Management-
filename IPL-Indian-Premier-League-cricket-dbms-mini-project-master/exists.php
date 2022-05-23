@@ -43,7 +43,7 @@ $query="SELECT playername,cap_no,name
 FROM player
 WHERE EXISTS (SELECT *
               FROM team
-              WHERE team.rating>=119);";
+              WHERE team.rating>7);";
 $result=mysqli_query($con,$query);
 if(mysqli_num_rows($result)>0)
 {

@@ -32,7 +32,7 @@
     <button class="back--btn">
     <a href="admin1st.html">Back</a></button>
 		<div class="title-table">
-Team Ranking
+Stadiums
 </div>
 <div class="stadium-table">
 	<table align="center">

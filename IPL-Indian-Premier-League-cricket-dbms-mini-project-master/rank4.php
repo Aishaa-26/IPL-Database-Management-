@@ -6,7 +6,7 @@
     }
     tr{
         border: 1px solid black;
-        background-color:#F6F9F0;
+        
     }
     th{
         border: 1px solid black;

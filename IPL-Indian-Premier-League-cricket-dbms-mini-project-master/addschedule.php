@@ -11,7 +11,7 @@
     if( $team1==$team2){
         echo "";
       echo "<script type='text/javascript'>alert('CANNOT PLAY AGAINST SELF!!');</script>";
-      header("refresh: 0.01; url=admin1.html");
+      header("refresh: 0.01; url=admin1st.html");
     }
 else{
      $query="insert into schedules(team1,team2,date,match_no,venue) values('$team1','$team2','$date','$match_no','$venue')";
