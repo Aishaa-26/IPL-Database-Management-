@@ -29,29 +29,25 @@ border: 2px solid black;
       </button>
 <div style="margin-top:225px; style : center" >
 <table align="center">
-<tr>
-<th>Average runs of MI</th>
- 
 
-</tr>
 <?php
 
 $name = $_POST['name'];
 $con=mysqli_connect("localhost","root","","cricket",3307);
 $query="SELECT AVG(runs) FROM `player`group by name having name='$name'";
-$result=mysqli_query($con,$query);
-
-     
-       
+if($name==null){
+    echo "<script type='text/javascript'>alert('Please enter among following teams only (1)CSK (2)MI (3)RCB (4)SRH');</script>";
+      header("refresh: 0.01; url=know.html");
+}
+else{
+$result=mysqli_query($con,$query); 
     if(mysqli_num_rows($result)>0){
         while ($row=mysqli_fetch_assoc($result)) {
+            echo "<tr><th>Average runs of $name</th></tr>";
             echo "<tr><th>".$row["AVG(runs)"]."</th><tr>";
-                 
-           
-           
             }
         }
-
+    }
 mysqli_close($con);
 ?>
 </table>

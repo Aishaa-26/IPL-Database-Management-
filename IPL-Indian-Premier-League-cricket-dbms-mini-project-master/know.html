@@ -51,6 +51,21 @@
 
       }
 
+      .btn-disappear{
+          background-color: #19388a;
+          border: none;
+          display: none;
+      }
+
+      .adjust-to-fit{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .text-box{
+        position: relative;
+        bottom: 2px;
+      }
     </style>
   </head>
   <body>
@@ -71,36 +86,21 @@
           <a href="wicketHighest.php">
             Bowler with highest wickets {Purple cap}</a
           >
-        </li>
-        <li>
-          <label for="dropdown">
-            Average run-rate of
-            <select name="teamname" id="id1">
-              
-              <option value="" name="name" > </option>
-              <option value="a" name="name" > SRH <a href="averageCsk.php"></a></option>
-              <option value="b" name="name" >MI</option>
-              <option value="a" name="name" > CSK</option>
-              <option value="a" name="name" > RCB</option>
-            
-            </select>
-          </label>
-
-          <button type="submit" value="confirm" name="name" action="average.php" method="post">Yes</button>
+          </li>        
           
-          
-      <!-- </li>
-        <li>
-          <a href="averageCsk.php"> Average run-rate of CSK</a
-          >
-        </li>
-        <li>
-          <a href="averageMi.php"> Average run-rate of MI</a>
-        </li>
-        <li>
-          <a href="averageRcb.php"> Average run-rate of RCB</a
-          >
-        </li>-->  
+     <li> 
+       <section class="adjust-to-fit">
+         <div>
+        <a>Average Run-Rate of : </a>
+      </div>
+      <div>
+        <form action="average.php" method="post"><table><tr align="center">
+                <input class="text-box" type="text" name="name" placeholder="CSK/MI/RCB/SRH" style="width: 150px;height: 20px">
+              </div>
+              </section>
+        <button class="btn-disappear" type="submit" style="float:center;" value="Submit">
+        </tr></table>
+      </li>
         <li>
           <a href="exists.php">Players in IPL with team-rating 7+</a
           >
