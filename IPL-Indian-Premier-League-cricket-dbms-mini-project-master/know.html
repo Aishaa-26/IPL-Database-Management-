@@ -73,9 +73,23 @@
           >
         </li>
         <li>
-          <a href="averageSrh.php"> Average run-rate of SRH</a
-          >
-        </li>
+          <label for="dropdown">
+            Average run-rate of
+            <select name="teamname" id="id1">
+              
+              <option value="" name="name" > </option>
+              <option value="a" name="name" > SRH <a href="averageCsk.php"></a></option>
+              <option value="b" name="name" >MI</option>
+              <option value="a" name="name" > CSK</option>
+              <option value="a" name="name" > RCB</option>
+            
+            </select>
+          </label>
+
+          <button type="submit" value="confirm" name="name" action="average.php" method="post">Yes</button>
+          
+          
+      <!-- </li>
         <li>
           <a href="averageCsk.php"> Average run-rate of CSK</a
           >
@@ -86,7 +100,7 @@
         <li>
           <a href="averageRcb.php"> Average run-rate of RCB</a
           >
-        </li>
+        </li>-->  
         <li>
           <a href="exists.php">Players in IPL with team-rating 7+</a
           >
